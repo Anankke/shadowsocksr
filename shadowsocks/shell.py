@@ -259,7 +259,7 @@ def get_config(is_local):
         else:
             config['server'] = to_str(config['server'])
     else:
-        config['server'] = to_str(config.get('server', '0.0.0.0'))
+        config['server'] = to_str(config.get('server', '::'))
         try:
             config['forbidden_ip'] = \
                 IPNetwork(config.get('forbidden_ip', '127.0.0.0/8,::1/128'))
